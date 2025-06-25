@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Woyage AI Audio Extractor</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">Woyage AI</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Extract Audio from Your Videos Instantly</h2>
+      <p>Select an MP4 file, choose your start time, and let us handle the rest.</p>
+    </section>
+
+    <section class="upload-form">
+      <form action="/video/extract-audio" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="file">Upload MP4 Video</label>
+          <input type="file" id="file" name="file" accept="video/mp4" required>
+        </div>
+        <div class="form-group">
+          <label for="start">Start Time (seconds)</label>
+          <input type="number" id="start" name="start" value="0" step="0.1" required>
+        </div>
+        <button type="submit" class="btn-primary">Extract Audio</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Woyage AI. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
