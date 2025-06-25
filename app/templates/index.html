@@ -3,48 +3,189 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Woyage AI Audio Extractor</title>
+  <title>Woyage AI - Professional Audio Extraction</title>
   <link rel="stylesheet" href="/static/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Extract high-quality audio from your videos instantly with Woyage AI. Professional-grade audio extraction with precise timing control.">
 </head>
 <body>
   <header class="navbar">
     <div class="container">
-      <h1 class="logo">Woyage AI</h1>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="navbar-content">
+        <a href="#" class="logo">Woyage AI</a>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 
-  <main class="container">
-    <section class="hero">
-      <h2>Extract Audio from Your Videos Instantly</h2>
-      <p>Select an MP4 file, choose your start time, and let us handle the rest.</p>
-    </section>
+  <main class="main-content">
+    <div class="container">
+      <section id="home" class="hero">
+        <h1>Extract Audio from Videos<br>with Professional Precision</h1>
+        <p class="hero-subtitle">
+          Transform your MP4 videos into high-quality audio files instantly. 
+          Perfect for podcasts, music extraction, and content creation.
+        </p>
+        <div class="hero-features">
+          <div class="feature-badge">🚀 Lightning Fast</div>
+          <div class="feature-badge">🎵 High Quality</div>
+          <div class="feature-badge">⚡ Instant Processing</div>
+          <div class="feature-badge">🔒 Secure & Private</div>
+        </div>
+      </section>
 
-    <section class="upload-form">
-      <form action="/video/extract-audio" method="post" enctype="multipart/form-data">
-        <div class="form-group">
-          <label for="file">Upload MP4 Video</label>
-          <input type="file" id="file" name="file" accept="video/mp4" required>
+      <section class="upload-section">
+        <h2 class="section-title">Upload Your Video</h2>
+        <p class="section-subtitle">Select your MP4 file and specify the start time for audio extraction</p>
+        
+        <form class="upload-form" action="/video/extract-audio" method="post" enctype="multipart/form-data">
+          <div class="form-group">
+            <label class="form-label" for="file">Video File</label>
+            <div class="file-input-wrapper" id="fileInputWrapper">
+              <input type="file" id="file" name="file" accept="video/mp4" required class="file-input">
+              <div class="file-input-content">
+                <div class="upload-icon">📁</div>
+                <div class="file-input-text">Click to browse or drag and drop your MP4 file</div>
+                <div class="file-input-subtext">Maximum file size: 100MB</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="start">Start Time (seconds)</label>
+            <input type="number" id="start" name="start" value="0" step="0.1" min="0" required class="number-input" placeholder="0.0">
+          </div>
+          
+          <button type="submit" class="submit-btn">
+            Extract Audio
+          </button>
+        </form>
+      </section>
+
+      <section id="features" class="features-section">
+        <h2 class="features-title">Why Choose Woyage AI?</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3 class="feature-title">Lightning Fast</h3>
+            <p class="feature-description">Process your videos in seconds with our optimized extraction engine</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎵</div>
+            <h3 class="feature-title">High Quality Audio</h3>
+            <p class="feature-description">Preserve original audio quality with lossless extraction technology</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3 class="feature-title">Secure & Private</h3>
+            <p class="feature-description">Your files are processed securely and deleted after extraction</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3 class="feature-title">Precise Timing</h3>
+            <p class="feature-description">Extract audio from any specific timestamp with millisecond precision</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h3 class="feature-title">Any Device</h3>
+            <p class="feature-description">Works perfectly on desktop, tablet, and mobile devices</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🆓</div>
+            <h3 class="feature-title">Free to Use</h3>
+            <p class="feature-description">No hidden fees, no subscriptions - completely free audio extraction</p>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="start">Start Time (seconds)</label>
-          <input type="number" id="start" name="start" value="0" step="0.1" required>
-        </div>
-        <button type="submit" class="btn-primary">Extract Audio</button>
-      </form>
-    </section>
+      </section>
+    </div>
   </main>
 
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 Woyage AI. All rights reserved.</p>
+      <div class="footer-content">
+        <p>&copy; 2025 Woyage AI. All rights reserved. | Professional Audio Extraction Technology</p>
+      </div>
     </div>
   </footer>
+
+  <script>
+    // Enhanced file input functionality
+    const fileInput = document.getElementById('file');
+    const fileInputWrapper = document.getElementById('fileInputWrapper');
+    const fileInputContent = fileInputWrapper.querySelector('.file-input-content');
+
+    // Drag and drop functionality
+    fileInputWrapper.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      fileInputWrapper.classList.add('dragover');
+    });
+
+    fileInputWrapper.addEventListener('dragleave', (e) => {
+      e.preventDefault();
+      fileInputWrapper.classList.remove('dragover');
+    });
+
+    fileInputWrapper.addEventListener('drop', (e) => {
+      e.preventDefault();
+      fileInputWrapper.classList.remove('dragover');
+      
+      const files = e.dataTransfer.files;
+      if (files.length > 0) {
+        fileInput.files = files;
+        updateFileDisplay(files[0]);
+      }
+    });
+
+    // File selection feedback
+    fileInput.addEventListener('change', (e) => {
+      if (e.target.files.length > 0) {
+        updateFileDisplay(e.target.files[0]);
+      }
+    });
+
+    function updateFileDisplay(file) {
+      const fileName = file.name;
+      const fileSize = (file.size / (1024 * 1024)).toFixed(2);
+      
+      fileInputContent.innerHTML = `
+        <div class="upload-icon">✅</div>
+        <div class="file-input-text">${fileName}</div>
+        <div class="file-input-subtext">Size: ${fileSize} MB</div>
+      `;
+    }
+
+    // Form submission enhancement
+    const form = document.querySelector('.upload-form');
+    const submitBtn = document.querySelector('.submit-btn');
+
+    form.addEventListener('submit', (e) => {
+      submitBtn.innerHTML = 'Processing...';
+      submitBtn.classList.add('loading');
+      submitBtn.disabled = true;
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
