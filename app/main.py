@@ -1,6 +1,7 @@
 import io
 import os
 import uuid
+import tempfile
 from fastapi import FastAPI, Request, File, UploadFile, Query, HTTPException
 from fastapi.responses import JSONResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
@@ -57,8 +58,11 @@ async def extract_audio(
 
     # read into memory
     input_bytes = await file.read()
-    tmp_in = f"/tmp/{uuid.uuid4()}.mp4"
-    tmp_out = f"/tmp/{uuid.uuid4()}.mp3"
+
+    # use the OS’s real temp directory
+    tmp_dir  = tempfile.gettempdir()
+    tmp_in   = os.path.join(tmp_dir, f"{uuid.uuid4()}.mp4")
+    tmp_out  = os.path.join(tmp_dir, f"{uuid.uuid4()}.mp3")
 
     # write temp input
     with open(tmp_in, "wb") as f:
