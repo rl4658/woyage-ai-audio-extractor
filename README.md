@@ -47,7 +47,7 @@ A responsive FastAPI + Jinja2 web application that lets you upload an MP4 video,
 
 7. **Open in your browser**
 
-Navigate to http://127.0.0.1:8000 and upload an MP4 to test!
+   Navigate to http://127.0.0.1:8000 and upload an MP4 to test!
 
 ## Project Structure
    ```bash
