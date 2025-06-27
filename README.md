@@ -2,6 +2,13 @@
 
 A responsive FastAPI + Jinja2 web application that lets you upload an MP4 video, specify a start time, extract the audio as an MP3, and securely store it in your AWS S3 bucket.
 
+## 🎥 Demo
+
+Watch a quick walkthrough of this project on Loom:  
+👉 [Demo Video](https://www.loom.com/share/7501683938994f5c81585a28aef1c0ee?sid=a2bd5373-34c4-49cd-a0f2-4206b6f06a3c)
+
+---
+
 ## Prerequisites
 
 - **Python 3.8+**  
