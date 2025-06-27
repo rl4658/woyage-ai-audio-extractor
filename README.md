@@ -30,7 +30,7 @@ A responsive FastAPI + Jinja2 web application that lets you upload an MP4 video,
 
 4. **Create and populate .env**
 
-In the project root, create a file named .env with:
+   In the project root, create a file named `.env` with:
    ```dotenv
    AWS_ACCESS_KEY_ID=YOUR_ACCESS_KEY_ID
    AWS_SECRET_ACCESS_KEY=YOUR_SECRET_ACCESS_KEY
