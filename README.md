@@ -107,6 +107,7 @@ Navigate to http://127.0.0.1:8000 and upload an MP4 to test!
 
 ## License
 
-This project is licensed under the MIT License.  
-See the [LICENSE](LICENSE) file for full terms and conditions.  
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).  
+See the full terms on the [Open Source Initiative website](https://opensource.org/licenses/MIT).  
+
 © 2025 Raymond Li
